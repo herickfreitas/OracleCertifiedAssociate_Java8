@@ -77,4 +77,21 @@ Um pacote ou package na tecnologia Java nada mais é do que um conjunto de class
 
 
 ## 5 - Criação de objetos
+Uma vez que a classe a partir da qual deseja-se criar o objeto exista, a criação do objeto dá-se através da aplicação do operador new:
+```
+new NomeDaClasse();
+```
+Essa expressão invoca o construtor da classe, um (pseudo-)método especial presente em todas as classes.
+
+A aplicação do operador new ao construtor da classe retorna uma referência para o objeto. Para que o objeto possa ser efetivamente manipulado, essa referência deve ser armazenada por quem determinou a criação do objeto:
+```
+NomeDaClasse umaRef;
+umaRef = new NomeDaClasse();
+
+// ou 
+
+NomeDaClasse umaRef = new NomeDaClasse();
+
+```
+Nesse exemplo, umaRef é uma variável que guarda uma referência para um objeto do tipo NomeDaClasse. As duas formas apresentadas são equivalentes.
 
