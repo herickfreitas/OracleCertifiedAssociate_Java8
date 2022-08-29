@@ -124,6 +124,13 @@ public class Tipos_Primitivos {
 ## 7 - Declaração e inicialização de variáveis
 Na linguagem Java, declaramos uma variável informando o tipo de dados que ela poderá receber e seu nome.
 
+<b>Boas práticas</b>
+
+Para termos um código limpo, devemos nomear variáveis, funções, parâmetros, classes ou métodos de acordo com suas funcionalidades. Isso é essencial para um bom entendimento do código. Ou seja, nada de variável com nome i para salvar a idade de uma pessoa ou de aux para nomear uma variável com papel de auxiliar.
+
+Geralmente o tamanho usado é de 1 (um) caractere para contadores em loops; 1 (uma) palavra para variáveis de loops e condicionais; 1–2 palavras para nomes de métodos; 2–3 palavras para nomes de classes; 3–4 palavras para nomes de variáveis globais. Não use tamanhos muito longos para nomes de variáveis (mais de 50 caracteres). Caso contrário ficará difícil de ler o código, além de que o mesmo pode não rodar em alguns compiladores por causa da limitação de tamanho das linhas.
+
+Além disso, não use “_” (underscore) em lugar algum exceto para constantes e valores de enums. Não reuse o mesmo nome de variável na mesma classe em diferentes contextos. E outra coisa: decida pelo uso de uma linguagem natural apenas, ou seja, só português ou só inglês.
 ```
 // Compila
 int x, y;
