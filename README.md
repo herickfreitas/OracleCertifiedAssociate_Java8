@@ -96,7 +96,8 @@ NomeDaClasse umaRef = new NomeDaClasse();
 Nesse exemplo, umaRef é uma variável que guarda uma referência para um objeto do tipo NomeDaClasse. As duas formas apresentadas são equivalentes.
 
 ## 6 - Tipos primitivos
-![image](https://user-images.githubusercontent.com/28120443/187231873-1a42ec0d-e820-4df2-8d8c-e9fd143afb3c.png)
+![image](https://user-images.githubusercontent.com/28120443/187232098-e63c4f0d-97e0-49fa-8a72-6893f5899230.png)
+
 
 ```
 public class Tipos_Primitivos {
