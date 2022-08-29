@@ -212,4 +212,9 @@ public class OperadoresBitABit {
   Resultado do operador >>: 15
 */
 ```
-
+<b>Operadores Ternários</b>: O operador ternário é um recurso para tomada de decisões com objetivo similar ao do if/else, mas que é codificado em apenas uma linha.
+```
+double salario = 1000; 
+double bonus = salario * (salario > 1000 ? 0.10 : 0.15); // Quando salario maior que 1000, o bonus será salario * 0.10 senão salario * 0.15 
+System.out.println(bonus);
+```
