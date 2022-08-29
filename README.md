@@ -150,6 +150,7 @@ int x, String y;
 
 ## 9 - Garbage Collection
 Mais informações em: https://blog.mandic.com.br/artigos/java-garbage-collection-melhores-praticas-tutoriais-e-muito-mais/
+
 O Java garbage collection é o processo pelo qual os programas Java executam o gerenciamento automático de memória. Os programas Java compilam para bytecode que pode ser executado em um Java Virtual Machine (JVM). Quando os programas Java são executados na JVM, os objetos são criados no heap, que é uma parte da memória dedicada ao programa. Eventualmente, alguns objetos não serão mais necessários. O garbage collector localiza esses objetos não utilizados e os exclui para liberar memória.
 ![image](https://user-images.githubusercontent.com/28120443/187268082-41547c41-8de9-42d9-bbae-398282223ce8.png)
 
