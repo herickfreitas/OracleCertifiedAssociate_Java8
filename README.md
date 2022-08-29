@@ -121,3 +121,16 @@ public class Tipos_Primitivos {
 	}
 }
 ```
+## 7 - Declaração e inicialização de variáveis
+```
+// Compila
+int x, y;
+int x = 1, y = 2;
+int x, y, z = 2; // Somente z foi inicializada
+int x; int y;
+
+// Não compila
+int x, int y;
+int x; y;
+int x; String y;
+```
