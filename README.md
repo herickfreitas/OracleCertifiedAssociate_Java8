@@ -220,3 +220,6 @@ double bonus = salario * (salario > 1000 ? 0.10 : 0.15);
 System.out.println(bonus);
 ```
 <b>Ordem de precedência</b>: 1º Unários, 2º Binários e 3º Ternários. Mas há prioridade das operações que estão dentro do dos parênteses.
+
+![image](https://user-images.githubusercontent.com/28120443/187277828-e7d6790f-6ff1-4082-87f7-77fdd21a9592.png)
+
