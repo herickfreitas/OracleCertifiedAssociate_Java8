@@ -147,3 +147,22 @@ int x, String y;
 ```
 ## 8 - Ordem elementos na classe
 ![image](https://user-images.githubusercontent.com/28120443/187253444-8c9323d1-50e5-47de-9a14-c50d0f77d15a.png)
+
+## 9 - Garbage Collection
+O Java garbage collection é o processo pelo qual os programas Java executam o gerenciamento automático de memória. Os programas Java compilam para bytecode que pode ser executado em um Java Virtual Machine (JVM). Quando os programas Java são executados na JVM, os objetos são criados no heap, que é uma parte da memória dedicada ao programa. Eventualmente, alguns objetos não serão mais necessários. O garbage collector localiza esses objetos não utilizados e os exclui para liberar memória.
+![image](https://user-images.githubusercontent.com/28120443/187268082-41547c41-8de9-42d9-bbae-398282223ce8.png)
+
+<b>Young Generation</b>: Os objetos recém-criados começam no Young Generation. O Young Generation é ainda subdividido em um espaço Eden, onde todos os novos objetos se iniciam, e dois espaços Survivor, onde os objetos são movidos do Eden depois de sobreviver a um ciclo do garbage collection. Quando os objetos são coletados ao garbage collection da Young Generation, é um evento menor do garbage collection.
+
+<b>Old Generation</b>: Objetos de longa duração são eventualmente movidos da Young Generation para a Old Generation. Quando os objetos são lixo coletado da Old Generation, é um grande evento de garbage collection.
+
+<b>Permanent Generation</b>: Metadados como classes e métodos são armazenados na Permanent Generation. As classes que não estão mais em uso podem ser coletadas da Permanent Generation.
+
+<b>Melhores práticas em Garbage Collection Java</b>
+Para muitos aplicativos simples, o Java garbage collection não é algo que um programador precise conscientemente considerar. No entanto, para programadores que desejam avançar suas habilidades Java, é importante entender como funciona o Java garbage collection e as maneiras pelas quais ele pode ser ajustado.
+
+Além dos mecanismos básicos de garbage collection, um dos pontos mais importantes para entender sobre o garbage collection em Java é que ela é não-determinística e não há como prever quando o garbage collection ocorrerá em tempo de execução. É possível incluir um hint no código para executar o garbage collector com os métodos System.gc() ou Runtime.gc(), mas eles não oferecem nenhuma garantia de que o garbage collector será realmente executado.
+
+A melhor abordagem para ajustar o Java garbage collection é configurar flags na JVM. As flags podem ajustar o garbage collector a ser usado (por exemplo, Serial, G1 etc.), o tamanho inicial e máximo do heap, o tamanho das seções de heap (por exemplo, Young Generation, Old Generation) e muito mais. A natureza do aplicativo a ser ajustado é um bom guia inicial para as configurações. Por exemplo, o Parallel garbage collector é eficiente, mas frequentemente levará a eventos “stop the world”, tornando-o mais adequado para o processamento backend onde longas pausas para o garbage collection são aceitáveis.
+
+Por outro lado, o CMS garbage collector é projetado para minimizar pausas, o que o torna ideal para aplicações GUI onde a capacidade de resposta é importante. O ajuste fino adicional pode ser realizado alterando o tamanho do heap ou suas seções e medindo a eficiência do garbage collection usando uma ferramenta como jstat.
