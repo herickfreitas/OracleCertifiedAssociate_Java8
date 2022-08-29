@@ -122,6 +122,8 @@ public class Tipos_Primitivos {
 }
 ```
 ## 7 - Declaração e inicialização de variáveis
+Na linguagem Java, declaramos uma variável informando o tipo de dados que ela poderá receber e seu nome.
+
 ```
 // Compila
 int x, y;
