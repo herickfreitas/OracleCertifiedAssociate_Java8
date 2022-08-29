@@ -159,6 +159,7 @@ O Java garbage collection é o processo pelo qual os programas Java executam o g
 <b>Permanent Generation</b>: Metadados como classes e métodos são armazenados na Permanent Generation. As classes que não estão mais em uso podem ser coletadas da Permanent Generation.
 
 <b>Melhores práticas em Garbage Collection Java</b>
+
 Para muitos aplicativos simples, o Java garbage collection não é algo que um programador precise conscientemente considerar. No entanto, para programadores que desejam avançar suas habilidades Java, é importante entender como funciona o Java garbage collection e as maneiras pelas quais ele pode ser ajustado.
 
 Além dos mecanismos básicos de garbage collection, um dos pontos mais importantes para entender sobre o garbage collection em Java é que ela é não-determinística e não há como prever quando o garbage collection ocorrerá em tempo de execução. É possível incluir um hint no código para executar o garbage collector com os métodos System.gc() ou Runtime.gc(), mas eles não oferecem nenhuma garantia de que o garbage collector será realmente executado.
