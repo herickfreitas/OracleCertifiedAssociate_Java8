@@ -219,3 +219,4 @@ double bonus = salario * (salario > 1000 ? 0.10 : 0.15);
 // Quando salario maior que 1000, o bonus será salario * 0.10 senão salario * 0.15 
 System.out.println(bonus);
 ```
+<b>Ordem de precedência/b> - 1º Unários, 2º Binários e 3º Ternários. Mas há prioridade das operações que estão dentro do dos parênteses.
