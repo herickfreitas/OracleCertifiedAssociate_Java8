@@ -1,6 +1,33 @@
 # OracleCertifiedAssociate_Java8
 
-## 1 - Formatos para implementação de comentários.
+## 1 - Formatos para implementação de comentários. 
+Mais informações em: https://acervolima.com/comentarios-em-java/ 
+
+### Comentários de linha única
+```
+// Single line comment here
+```
+
+### Comentários multilinhas
+```
+/*Comment starts
+continues
+continues
+Commnent ends*/
+```
+
+### Comentários de documentação
+
+```
+/**Comment start
+*
+*tags are used in order to specify a parameter
+*or method or heading
+*HTML tags can also be used 
+*such as <h1>
+*
+*comment ends*/
+```
 
 
 ## 2 - O método main
