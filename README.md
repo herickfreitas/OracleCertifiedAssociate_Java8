@@ -134,5 +134,5 @@ int x; int y;
 // Não compila
 int x, int y;
 int x; y;
-int x; String y;
+int x, String y;
 ```
