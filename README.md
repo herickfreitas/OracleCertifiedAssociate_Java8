@@ -169,3 +169,14 @@ Além dos mecanismos básicos de garbage collection, um dos pontos mais importan
 A melhor abordagem para ajustar o Java garbage collection é configurar flags na JVM. As flags podem ajustar o garbage collector a ser usado (por exemplo, Serial, G1 etc.), o tamanho inicial e máximo do heap, o tamanho das seções de heap (por exemplo, Young Generation, Old Generation) e muito mais. A natureza do aplicativo a ser ajustado é um bom guia inicial para as configurações. Por exemplo, o Parallel garbage collector é eficiente, mas frequentemente levará a eventos “stop the world”, tornando-o mais adequado para o processamento backend onde longas pausas para o garbage collection são aceitáveis.
 
 Por outro lado, o CMS garbage collector é projetado para minimizar pausas, o que o torna ideal para aplicações GUI onde a capacidade de resposta é importante. O ajuste fino adicional pode ser realizado alterando o tamanho do heap ou suas seções e medindo a eficiência do garbage collection usando uma ferramenta como jstat.
+
+## 10 - Operadores
+
+<b>Operadores Unários</b>: Esses operadores são aplicados especificamente sobre um operador. Eles realizam alguns trabalhos básicos como incremental, decremental e inversão de valores numéricos e booleanos:
+```
++	Operador unário de valor positivo – números são positivos sem esse operador explicitamente
+–	Operador unário de valor negativo – nega um número ou expressão aritmética
+++	Operador unário de incremento de valor – incrementa o valor em 1 unidade
+—	Operador unário de decremento de valor – decrementa o valor em 1 unidade
+!	Operador unário lógico de negação – nega o valor de uma expressão booleana
+```
