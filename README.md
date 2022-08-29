@@ -145,3 +145,5 @@ int x, int y;
 int x; y;
 int x, String y;
 ```
+## 8 - Ordem elementosna classe
+![image](https://user-images.githubusercontent.com/28120443/187253444-8c9323d1-50e5-47de-9a14-c50d0f77d15a.png)
