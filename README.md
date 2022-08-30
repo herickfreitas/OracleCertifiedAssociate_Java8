@@ -265,3 +265,14 @@ public class Teste {
 	}
 }
 ```
+<b>Operador ternário</b> : A linguagem Java fornece um operador ternário ou operador condicional (?:). Este operador pode ser utilizado no lugar de uma instrução if…else. Entretanto, ao contrário desta, quando usamos o operador ternário, codificamos as instruções em apenas uma linha, tornando o código mais curto.
+```
+public class Teste {
+	public static void main(String[] args) {
+		int media = 8;
+		String resultado;
+		resultado = (media >= 7) ? "Aprovado!" :  "Reprovado!";
+			System.out.println(resultado);
+	}
+}
+```
