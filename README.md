@@ -321,3 +321,29 @@ public class SwitchTest {
     }
 }
 ```
+## 13 - Loops: while, do-while e for
+<b>while</b> : É utilizado para construir uma estrutura de repetição que executa, repetidamente, enquanto uma expressão booleana for verdadeira.
+```
+public class ExemploWhile {
+    public static void main(String args[]) {
+        int contador = 0;
+        while (contador < 50) {
+            System.out.println("Repetição nr: " + contador);
+            contador++;
+        }
+    }
+} 
+```
+<b>do-while</b> : Primeiramente é executado o "do" e o mesmo continuará sendo executado enquanto a expressão booleana for verdadeira, o "while".
+```
+public class ExemploDoWhile {
+    public static void main(String args[]) {
+        int contador = 0;
+        do {
+        	System.out.println("Repetição nr: " + contador);
+        	contador++;
+        }
+        while (contador < 50); 
+    }
+} 
+```
