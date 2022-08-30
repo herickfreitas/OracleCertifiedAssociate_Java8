@@ -246,3 +246,22 @@ public class Teste {
 	}
 }
 ```
+<b>Estrutura de decisão else-if</b> : Com este recurso poderemos adicionar uma nova condição a estrutura de decisão, se a média do aluno for maior ou igual a 7, ou seja se a expressão for verdadeira, imprima “APROVADO”, senão, se a média for maior ou igual a 5 e menor que 7, imprima “EM RECUPERAÇÃO”, caso contrário imprima “REPROVADO”.
+```
+public class Teste {
+	public static void main(String[] args) {
+		int media = 6;
+		String resultado;
+		if (media >= 7) {
+			resultado = "Aprovado!";
+		}
+		else if (media >= 5){
+			resultado = "Recuperação!";
+		}
+		else {
+			resultado = "Reprovado!";
+		}
+			System.out.println(resultado);
+	}
+}
+```
