@@ -390,6 +390,7 @@ for ( initialization; condition; increment ) {
 ```
 Loop aninhados são indispensáveis para representação de matrizes.
 ```
+// Exemplo 01
 import java.io.*;
 class ExemploLoopAninhado {
     public static void print2D(int mat[][])
@@ -408,4 +409,20 @@ class ExemploLoopAninhado {
         print2D(mat);
     }
 }
+```
+```
+// Exemplo 02
+class ExemploLoopAninhado {
+	public static void main(String args[]) {
+		String[][] ArrayComplexo = 
+			{{"Herick","João","Igor","Carlos"},{"Leandro","Daniel","Fabio","Manoel"},{"Walter","Rogerio","Marcos","Joaquim"}};
+			for (String[] ArraySimple : ArrayComplexo){
+				for (int i=0; i<ArraySimple.length; i++ ) {
+					System.out.print(ArraySimple[i]+"\t");
+				}
+				System.out.println();
+			}
+	}
+}
+
 ```
