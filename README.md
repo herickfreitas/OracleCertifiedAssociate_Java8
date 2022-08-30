@@ -223,3 +223,26 @@ System.out.println(bonus);
 
 ![image](https://user-images.githubusercontent.com/28120443/187277828-e7d6790f-6ff1-4082-87f7-77fdd21a9592.png)
 
+## 11 - Comandos de decisão básicos
+<b>Estrutura de decisão if</b> : A estrutura de decisão “if” ou instrução de seleção única constitui uma construção simples que permite que uma instrução ou um bloco de instruções seja executado após a análise de determinada condição que deverá ser satisfeita para que a execução ocorra. O que ela faz é avaliar se uma expressão é verdadeira (true) ou falsa (false).
+
+É importante ressaltar que em Java essa expressão deve ser sempre um boolean. Assim, fragmentando o exemplo acima, “media do aluno”, se a média do aluno for maior ou igual a 7, ou seja, se a expressão for verdadeira, imprima “APROVADO”.
+
+<b>Estrutura de decisão if / else</b> : Se desejarmos definir uma ação para quando a condição for verdadeira e outra ação distinta para quando a condição for falsa, então usaremos a instrução de seleção dupla, if … else, que nos permitirá executar uma ação fora da ordem da sequência.
+
+Assim sendo, o primeiro bloco de instrução somente será executado se a condição for true, caso contrário, se a condição for false, o bloco de instrução a ser executado será o segundo, desviando então, o fluxo de execução do sistema.
+```
+public class Teste {
+	public static void main(String[] args) {
+		int media = 7;
+		String resultado;
+		if (media >= 7) {
+			resultado = "Aprovado!";
+		}
+		else {
+			resultado = "Reprovado!";
+		}
+			System.out.println(resultado);
+	}
+}
+```
