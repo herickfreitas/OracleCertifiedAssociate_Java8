@@ -426,3 +426,4 @@ class ExemploLoopAninhado {
 }
 
 ```
+![image](https://user-images.githubusercontent.com/28120443/187511840-8ddf1d20-337c-4551-bde1-164668980de3.png)
