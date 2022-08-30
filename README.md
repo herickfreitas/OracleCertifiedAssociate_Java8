@@ -347,3 +347,32 @@ public class ExemploDoWhile {
     }
 } 
 ```
+<b>for - Básico</b> : Executa a declaração e expressão de laço repetidamente, até que a condição da expressão se torne falsa.
+```
+public class ExemploForBasico {
+    public static void main(String args[]) {
+        for (int i = 0; i < 10; i++) {
+        	System.out.println("Impressão nº: "+i);
+        }
+    }
+} 
+```
+<b>for each</b> : Essa estrutura é caracterizada por promover uma forma mais limpa de realizar uma iteração sobre uma collection em Java, pois não é necessário manter um inteiro contador para setar a posição ou chamar o método hasNext() para verificar se existem mais elementos na collection.
+```
+import java.util.*;
+public class ExemploForEach {
+    public static void main(String args[]) {
+    	List<String> cidades = new ArrayList<String>();
+    	cidades.add("Curitiba");
+    	cidades.add("São Paulo");
+    	cidades.add("Rio de Janeiro");
+    	cidades.add("Salvador");
+    	cidades.add("Espírito Santo");
+    	cidades.add("Rio Grande do Sul");
+    	 
+    	for (String cidade : cidades) {
+    	    System.out.println(cidade);
+    	}
+    }
+} 
+```
