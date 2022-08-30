@@ -379,12 +379,33 @@ public class ExemploForEach {
 ## 14 - Controle de fluxo avançado
 <b>Loop aninhado</b> : Significa uma instrução de loop dentro de outra instrução de loop. É por isso que os loops aninhados também são chamados de “ loop inside loop ”.
 
-Sintaxe para for aninhado
+Sintaxe para for aninhado o mesmo procedimento poderá ser realizado com while, do-while, for each...
 ```
 for ( initialization; condition; increment ) {
    for ( initialization; condition; increment ) {
       // statement of inside loop
    }
    // statement of outer loop
+}
+```
+Loop aninhados são indispensáveis para representação de matrizes.
+```
+import java.io.*;
+class ExemploLoopAninhado {
+    public static void print2D(int mat[][])
+    {
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[i].length; j++)
+                System.out.print(mat[i][j] + " ");
+            System.out.println();
+        }
+    }
+    public static void main(String args[]) throws IOException
+    {
+        int mat[][] = { { 1, 2, 3, 4 },
+                        { 5, 6, 7, 8 },
+                        { 9, 8, 7, 6 } };
+        print2D(mat);
+    }
 }
 ```
