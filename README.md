@@ -461,3 +461,58 @@ public class _01_Strings {
 }
 ```
 Métodos importantes
+```
+package _02_Core_Java_API;
+public class _02_MetodosString {
+	public static void main(String[] args) {
+		String string = "animais";
+		/* length() - RETORNA TAMANHO */
+		System.out.println(string.length()); 	// resultado 7
+		/* charAt() - RETORNA CARACTER NO INDICE INFORMADO */
+		System.out.println(string.charAt(0)); 	// Resultado a
+		System.out.println(string.charAt(6));	// Resultado s
+		//System.out.println(string.charAt(8));	// Exception - StringIndexOutOfBoundsException
+		/* indexOf() - RETORNA INDICE DO CARACTER INFORMADO */
+		System.out.println(string.indexOf("n"));   	// Resultado 1
+		System.out.println(string.indexOf("ai"));  	// Resultado 4 apartir da posição
+		System.out.println(string.indexOf("a", 4));	// Resultado 4, irá procurar apartir do indice 4
+		System.out.println(string.indexOf("z"));	// Resultado -1, não encontrado
+		/* substring() - RETORNA TRECHO CONFORME SOLICITADO */
+		System.out.println(string.substring(4));	// Resultado ais
+		System.out.println(string.substring(4,6));	// Resultado ai
+		System.out.println(string.substring(string.indexOf("m"))); // Resultado mais
+		/* toUpperCase() /  toLowerCase() - RETORNA CAIXA ALTA OU BAIXA */
+		System.out.println(string.toUpperCase());  		// Resultado ANIMAIS
+		System.out.println("AbCDF1234".toLowerCase());  // Resultado abcdf1234
+		/* equals() - RETORNA BOLEANO RESULTADO DA COMPARAÇÃO */
+		System.out.println("abc".equals("ABC"));			// false
+		System.out.println("ABC".equals("ABC"));			// true
+		System.out.println("abc".equalsIgnoreCase("ABC"));	// true
+		/* startsWith() / endsWith - RETORNA BOLEANO BASEADO NA LETRA INICIAL OU FINAL */
+		System.out.println("abc".startsWith("a"));	// Começa com a letra? true
+		System.out.println("ABC".startsWith("A"));	// Começa com a letra? true
+		System.out.println("abc".endsWith("c"));	// Termina com a letra? true
+		System.out.println("ABC".endsWith("C"));	// Termina com a letra? true
+		/* contains() - RETORNA BOLEANO SE HOUVER A INFORMAÇÃO */
+		System.out.println("abc".contains("a"));	// Contem a contraint? true
+		System.out.println("abc".contains("A"));	// Contem a contraint? false
+		/* replace() - SUBSTITUIÇÃO CONFORME SOLICITAÇÃO */
+		System.out.println(string.replace("ai", "ea"));	// Resultado animeas
+		/* trim() - REMOVE ESPAÇOS */
+		System.out.println("\t	accv".trim());	// Removendo espaços - accv
+	}
+
+}
+```
+## 16 - Classe StringBuilder
+A classe StringBuilder faz parte do pacote java.lang. Essa classe permite criar e manipular dados de Strings dinamicamente, ou seja, podem criar variáveis de String modificáveis.
+
+O significado da classe StringBuilder não tem o mesmo sentido que classe String. Existe uma diferença entre essas classes, veja algumas características.
+
+<b>Características StringBuilder </b>
+Armazena caracteres especificados pela sua capacidade, caso ela seja excedida, é aumentada para acomodar os caracteres adicionais;
+-	Não precisa alocar novos objetos quando realiza uma concatenação;
+-	Não são sincronizadas;
+-	Não são seguras para threads;
+
+Uma vantagem sobre a classe String é a concatenação de strings. Pois quando concatena strings com StringBuilder é invocado o método append. Esse método aloca novas strings concatenadas para o mesmo objeto, ou seja, cada vez que concatena strings não são criadas cópias dos objetos como é realizado pelo método concat da classe String, contribuindo para um melhor desempenho do sistema.

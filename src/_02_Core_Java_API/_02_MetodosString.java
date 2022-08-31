@@ -1,7 +1,5 @@
 package _02_Core_Java_API;
-
 public class _02_MetodosString {
-
 	public static void main(String[] args) {
 		String string = "animais";
 		System.out.println(string.length()); 	// Retorna o tamanho da string 	// resultado 7
@@ -33,6 +31,10 @@ public class _02_MetodosString {
 		
 		System.out.println("abc".contains("a"));	// Contem a contraint? true
 		System.out.println("abc".contains("A"));	// Contem a contraint? false
+		
+		System.out.println(string.replace("ai", "ea"));	// Resultado animeas
+		
+		System.out.println("\t	accv".trim());	// Removendo espaços - accv
 	}
 
 }
