@@ -510,9 +510,50 @@ A classe StringBuilder faz parte do pacote java.lang. Essa classe permite criar 
 O significado da classe StringBuilder não tem o mesmo sentido que classe String. Existe uma diferença entre essas classes, veja algumas características.
 
 <b>Características StringBuilder </b>
+
 Armazena caracteres especificados pela sua capacidade, caso ela seja excedida, é aumentada para acomodar os caracteres adicionais;
 -	Não precisa alocar novos objetos quando realiza uma concatenação;
 -	Não são sincronizadas;
 -	Não são seguras para threads;
 
-Uma vantagem sobre a classe String é a concatenação de strings. Pois quando concatena strings com StringBuilder é invocado o método append. Esse método aloca novas strings concatenadas para o mesmo objeto, ou seja, cada vez que concatena strings não são criadas cópias dos objetos como é realizado pelo método concat da classe String, contribuindo para um melhor desempenho do sistema.
+Uma vantagem sobre a classe String é a concatenação de strings. Pois quando concatena strings com StringBuilder é invocado o método append. 
+Esse método aloca novas strings concatenadas para o mesmo objeto, ou seja, cada vez que concatena strings não são criadas cópias dos objetos como é realizado pelo método concat da classe String, 
+contribuindo para um melhor desempenho do sistema.
+
+```
+package _02_Core_Java_API;
+public class _03_StringBuilder {
+	public static void main(String[] args) {
+		/* METODO APPEND */
+		StringBuilder sb = new StringBuilder().append(1).append('c');
+		sb.append("-").append(true);
+		System.out.println(sb); // Resultado 1c-true
+		// Todos os conteúdos serão convertidos para String
+		/* METODO INSERT */
+		sb = new StringBuilder("animais");
+		sb.insert(7, "-");		//animais-
+		sb.insert(0, "-");		//-animais-
+		sb.insert(4, "-");		// Resultado -ani-mais-
+		System.out.println(sb); 
+		/* METODO DELETE */
+		sb.delete(1, 3);
+		System.out.println(sb); // Resultado -i-mais-
+		sb.deleteCharAt(15);	// Exception - String index out of range
+	}
+}
+```
+```
+package _02_Core_Java_API;
+public class _03_StringIgualdade {
+			String name;
+			public static void main(String[] args) {
+				_03_StringIgualdade t1 = new _03_StringIgualdade(); //Objeto_1
+				_03_StringIgualdade t2 = new _03_StringIgualdade();	//Objeto_2
+				_03_StringIgualdade t3 = t1;						//Objeto_1
+				System.out.println(t1 == t3);		// true
+				System.out.println(t1 == t2);		// false
+				System.out.println(t1.equals(t2));	// false equals é a mesma coisa de ==
+		}
+	}
+```
+## 17 - Arrays
