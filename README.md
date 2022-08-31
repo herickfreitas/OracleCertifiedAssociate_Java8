@@ -557,3 +557,44 @@ public class _03_StringIgualdade {
 	}
 ```
 ## 17 - Arrays
+Os arrays ou matrizes, como são conhecidos pelo Java, fazem parte do pacote java.util na coleção da API do Java. São objetos de recipientes que contém um número fixo de valores de um único tipo. 
+O comprimento de um array é estabelecido quando criado, sendo que após a criação o seu comprimento fica fixo.
+Cada item em um array é chamado de elemento, e cada elemento é acessado pelo número, o índice. Abaixo é mostrado se dá esse acesso aos seus elementos, lembrando que sempre sua numeração começa em 0.
+```
+package _02_Core_Java_API;
+public class _04_Arrays {
+	public static void main(String[] args) {
+		//[] - são inseridos em uma variável que referecia um array
+        int[] a = new int[4];
+        //OUTRA MANEIRA DE FAZER UMA DECLARAÇÃO DE ARRAY
+        int[] b;
+        b = new int[10];
+        //DECLARANDO VÁRIOS ARRAYS
+        int[] r = new int[44], k = new int[23];
+        //{} - inicializar valores em um array sua declaração
+        int[] iniciaValores = {12,32,54,6,8,89,64,64,6};
+        //DECLARA UM ARRAY DE INTEIROS
+        int[] meuArray;
+        //ALOCA MEMÓRIA PARA 10 INTEIROS
+        meuArray = new int[10];
+        //INICIALIZA O PRIMEIRO ELEMENTO
+        meuArray [0] = 100;
+        meuArray [1] = 85;
+        meuArray [2] = 88;
+        meuArray [3] = 93;
+        meuArray [4] = 123;
+        meuArray [5] = 952;
+        meuArray [6] = 344;
+        meuArray [7] = 233;
+        meuArray [8] = 622;
+        meuArray [9] = 8522;
+        //meuArray [10] = 564; //ESTOURA A PILHA POIS NÃO EXISTE O ÍNDICE 10
+
+        System.out.println(meuArray[9]);
+        System.out.println(meuArray[2]);
+	
+        System.out.println(meuArray.length); 
+        //Atenção, é uma propriedade e não um método quando string
+	}
+}
+```
