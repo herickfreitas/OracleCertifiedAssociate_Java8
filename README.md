@@ -598,3 +598,50 @@ public class _04_Arrays {
 	}
 }
 ```
+<b>Ordenação de string</b>: sort() Método para ordenar os objetos em ArrayList por data em Java. O método collections. sort() poderia realizar a ordenação por data em uma ArrayList.
+```
+package _02_Core_Java_API;
+import java.util.Arrays;
+public class _05_ArraysSort {
+	public static void main(String[] args) {
+		String[] strings = {"Manoel","Zebra","Julia","Antônio","Herick"};
+		Arrays.sort(strings);
+		//Exibindo string ordenado
+		for( String string : strings){
+			System.out.print(string + " "); //Resultado Antônio Herick Julia Manoel Zebra 
+
+		}
+	}
+}
+```
+<b>Binary Search</b>: Simplificando, o algoritmo compara o valor da chave com o elemento do meio da matriz; se forem desiguais, a metade da qual a chave não pode fazer parte é eliminada, e a busca continua pela metade restante até que seja bem-sucedida.
+Lembre-se – o aspecto chave aqui é que o array já está ordenado.
+```
+package _02_Core_Java_API;
+import java.util.Arrays;
+public class _06_ArraysBinarySearch {
+	public static void main(String[] args) {
+		int[] numbers = { 3, 2, 1 };
+		System.out.println(Arrays.binarySearch(numbers, 2)); //Resultado 1
+		System.out.println(Arrays.binarySearch(numbers, 3)); //Resultado -4
+		Arrays.sort(numbers); // Ordenando array
+		System.out.println(Arrays.binarySearch(numbers, 2)); //Resultado 1
+		System.out.println(Arrays.binarySearch(numbers, 3)); //Resultado 2
+		}
+}
+```
+<b>varargs</b>: Quando temos um método que não sabemos ao certo quantos parâmetros serão passados, podemos passar um vetor ou lista de atributos primitivos ou objetos, mas em Java também podemos definir na assinatura do método, 
+que ele recebe um parâmetro do tipo varargs. O método pode receber quantos parâmetros forem necessários, porém só pode ter apenas um varargs na assinatura do método.
+```
+package _02_Core_Java_API;
+import java.util.Arrays;
+public class _06_ArraysVarargs {
+	public static void main(String[] args) {
+		metodoV("1", "2");
+		}
+	public static void metodoV(String s1, String... strs) {
+		System.out.println(s1);
+		System.out.println(strs[0]);
+	}
+}
+```
