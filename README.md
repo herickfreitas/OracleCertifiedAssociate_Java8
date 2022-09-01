@@ -598,7 +598,8 @@ public class _04_Arrays {
 	}
 }
 ```
-<b>Ordenação de string</b>: sort() Método para ordenar os objetos em ArrayList por data em Java. O método collections. sort() poderia realizar a ordenação por data em uma ArrayList.
+## 18 - Ordenação de string
+sort() Método para ordenar os objetos em ArrayList por data em Java. O método collections. sort() poderia realizar a ordenação por data em uma ArrayList.
 ```
 package _02_Core_Java_API;
 import java.util.Arrays;
@@ -614,7 +615,8 @@ public class _05_ArraysSort {
 	}
 }
 ```
-<b>Binary Search</b>: Simplificando, o algoritmo compara o valor da chave com o elemento do meio da matriz; se forem desiguais, a metade da qual a chave não pode fazer parte é eliminada, e a busca continua pela metade restante até que seja bem-sucedida.
+## 19 - Binary Search
+Simplificando, o algoritmo compara o valor da chave com o elemento do meio da matriz; se forem desiguais, a metade da qual a chave não pode fazer parte é eliminada, e a busca continua pela metade restante até que seja bem-sucedida.
 Lembre-se – o aspecto chave aqui é que o array já está ordenado.
 ```
 package _02_Core_Java_API;
@@ -630,7 +632,8 @@ public class _06_ArraysBinarySearch {
 		}
 }
 ```
-<b>varargs</b>: Quando temos um método que não sabemos ao certo quantos parâmetros serão passados, podemos passar um vetor ou lista de atributos primitivos ou objetos, mas em Java também podemos definir na assinatura do método, 
+## 20 - varargs
+Quando temos um método que não sabemos ao certo quantos parâmetros serão passados, podemos passar um vetor ou lista de atributos primitivos ou objetos, mas em Java também podemos definir na assinatura do método, 
 que ele recebe um parâmetro do tipo varargs. O método pode receber quantos parâmetros forem necessários, porém só pode ter apenas um varargs na assinatura do método.
 ```
 package _02_Core_Java_API;
@@ -639,9 +642,38 @@ public class _06_ArraysVarargs {
 	public static void main(String[] args) {
 		metodoV("1", "2");
 		}
-	public static void metodoV(String s1, String... strs) {
+	public static void metodoV(String s1, String... strs) { //varargs - Tem que ser no ultimo parâmetro
 		System.out.println(s1);
 		System.out.println(strs[0]);
+	}
+}
+```
+## 21 - Array multidimensional
+A quantidade de colchetes erá definir a dimensão do Array, exemplo 1:
+```
+int [][] vars1;		// 2D
+int vars2 [][];		// 2D
+int [] vars3 [];	// 2D
+int [] vars4 [], space[][];	// 2D e 3D
+```
+Exemplo 2:
+```
+package _02_Core_Java_API;
+import java.util.Arrays;
+public class _08_ArraysMultidimensional {
+	public static void main(String[] args) {
+		String [][] retangulo = new String[3][2]; //Onde, 3 = dimensão e 2 = tamanho
+		retangulo[0][1] = "set"; // Desta forma um valor é atribuido
+		System.out.println(retangulo[0][1]); //Resultado set
+		
+		//É possível criar o array atribuindo valores
+		int[][] tamanhoDiferente = {{1,2,0},{3,0,0},{9,8,7}};
+		for (int i = 0; i < tamanhoDiferente.length; i++) {
+			for (int j = 0; j < tamanhoDiferente.length; j++) {
+				System.out.print(tamanhoDiferente[i][j]+" ");
+			}
+			System.out.println();
+		}
 	}
 }
 ```
